@@ -4,6 +4,10 @@
  * @flow
  */
 
+ /*import dotenv from 'dotenv';
+ dotenv.config({silent: true, path: "./shared/process.env"});
+ console.log(process.env.API_BASE);*/
+
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';

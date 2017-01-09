@@ -4,7 +4,7 @@ import Counter from "./counter";
 import Login from "./login";
 import CookieManager from 'react-native-cookies';
 
-CookieManager.get('http://172.17.153.171:8082', (err, res) => {
+CookieManager.get('http://172.17.153.171:8082/count', (err, res) => {
   console.log("cookie", res);
 });
 

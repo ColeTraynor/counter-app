@@ -24,6 +24,7 @@ app.get('/', function(req, res) {
 //send user login page
 app.use('/count', bodyParser.json());
 app.post('/count', function(req, res) {
+  console.log("cookies", req.cookies);
   console.log("Count", req.body);
   var user = users[req.body.username];
   if (user) {
@@ -31,6 +32,7 @@ app.post('/count', function(req, res) {
       success: true,
       result: user.count
     })
+    res.cookie("auth", "tokenX");
   } else {
     res.send({
       success: false,
