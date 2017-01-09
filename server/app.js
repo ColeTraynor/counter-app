@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var cors = require('cors');
+require('dotenv').config({silent: true, path: "../shared/process.env"});
+console.log(process.env.API_BASE);
+
 
 var users = {
   Test: {

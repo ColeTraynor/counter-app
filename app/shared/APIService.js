@@ -1,13 +1,9 @@
-//replace with .env
-var config = {
-  apiUrl: "http://192.168.0.14:8082"
-}
 
 class APIService {
 
   API_BASE;
   constructor() {
-    this.API_BASE = config.apiUrl;
+    this.API_BASE = "http://172.17.153.171:8082";
   }
 
   extractData(res) {

@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Image, View, Animated, Easing, StyleSheet } from 'react-native';
 import Counter from "./counter";
 import Login from "./login";
+import CookieManager from 'react-native-cookies';
+
+CookieManager.get('http://172.17.153.171:8082', (err, res) => {
+  console.log("cookie", res);
+});
 
 class App extends Component {
     constructor() {
