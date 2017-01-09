@@ -28,11 +28,11 @@ app.post('/count', function(req, res) {
   console.log("Count", req.body);
   var user = users[req.body.username];
   if (user) {
+    res.cookie("auth", "tokenX");
     res.send({
       success: true,
       result: user.count
     })
-    res.cookie("auth", "tokenX");
   } else {
     res.send({
       success: false,
