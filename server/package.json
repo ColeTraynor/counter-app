@@ -1,0 +1,17 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon . -r --exec babel-node --presets es2017,es2015,stage-2",
+    "build": "babel . -s -D -d build --presets es2017,es2015,stage-2",
+    "start": "node build/"
+  },
+  "engines": {
+    "node": "6.9.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
