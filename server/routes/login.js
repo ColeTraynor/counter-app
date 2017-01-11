@@ -1,22 +1,16 @@
-var users = {
-  Test: {
-    count: 22
-  },
-  Cole: {
-    count: 123
-  }
-}
+import { Router } from 'express';
 
-export default router => {
+export default () => {
+  let router = Router();
 
-  router.get('/', function(req, res) {
+  router.get('/test', function(req, res) {
     res.send("login");
   })
 
   router.post('/', function(req, res) {
     console.log("cookies", req.cookies);
     console.log("Count", req.body);
-    var user = users[req.body.username];
+    var user = 123// user.getUser(req.body.username);
     if (user) {
       res.cookie("auth", "tokenX");
       res.send({

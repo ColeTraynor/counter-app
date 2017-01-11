@@ -8,7 +8,7 @@ require('dotenv').config({silent: true, path: "../shared/process.env"});
 app.use(cors());
 app.use(bodyParser.json());
 app.use(routes());
-
+app.use(express.static('public'));
 
 app.listen(process.env.SERVER_PORT, function() {
   console.log("Server listening on port " + process.env.SERVER_PORT);
